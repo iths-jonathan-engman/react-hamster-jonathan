@@ -1,0 +1,36 @@
+"contestants": [
+		{
+		      "id": 1,
+		      "name": "Sixten",
+		      "age": 1,
+		      "favFood": "ostbollar",
+		      "loves": "Running that wheeeeeeeeeeeeeeeel!",
+		      "imgName": "hamster-1.jpg",
+		      "wins": 0,
+		      "defeats": 0,
+		      "games": 0
+		    },
+		    {
+		      "id": 2,
+		      "name": "Sven",
+		      "age": 5,
+		      "favFood": "morot",
+		      "loves": "Running that wheeeeeeeeeeeeeeeel!",
+		      "imgName": "hamster-2.jpg",
+		      "wins": 0,
+		      "defeats": 0,
+		      "games": 0
+		    }
+	],
+	"winner" :  {
+		      "id": 2,
+		      "name": "Sven",
+		      "age": 5,
+		      "favFood": "morot",
+		      "loves": "Running that wheeeeeeeeeeeeeeeel!",
+		      "imgName": "hamster-2.jpg",
+		      "wins": 0,
+		      "defeats": 0,
+		      "games": 0
+		    }
+}
