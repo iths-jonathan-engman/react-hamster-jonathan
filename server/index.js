@@ -26,6 +26,9 @@ app.use('/api/games', gamesRoute);
 const statsRoute = require('./routes/stats');
 app.use('/api/stats', statsRoute);
 
+const dbRoute = require('./db/db.json');
+app.use('api/db', dbRoute);
+
 
 app.listen(PORT, () => {
     console.info('Hamsterwars armed and ready on port 3000.')
