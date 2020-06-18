@@ -6,11 +6,11 @@ const PORT = process.env.PORT || 3000;
 app.use(express.json());
 
 let path = require('path');
-app.get('/*', (req, res) => {
-    let filePath = path.resolve('./build/index.html');
-    res.sendFile(filePath);
+app.get('*', (req,res) => {
+    let filePath = path.resolve('./build/index.html')
+    res.sendFile(filePath)
 })
-// app.use(express.static(__dirname + '/../build'));
+app.use(express.static(__dirname + '/../build'));
 //app.use('/', express.static('public'));
 app.use('/assets', express.static('assets'));
 
