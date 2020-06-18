@@ -7,7 +7,7 @@ app.use(express.json());
 
 let path = require('path');
 app.get('/*', (req, res) => {
-    let filePath = path.resolve('/../build/index.html');
+    let filePath = path.resolve('./build/index.html');
     res.sendFile(filePath);
 })
 // app.use(express.static(__dirname + '/../build'));
