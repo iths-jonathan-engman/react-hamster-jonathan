@@ -11,7 +11,7 @@ app.get('*', (req, res) => {
     res.sendFile(filePath)
 })
 app.use(express.static(__dirname + '/../build'));
-//app.use('/', express.static('public'));
+app.use('/', express.static('public'));
 app.use('/assets', express.static('assets'));
 
 const hamstersRoute = require('./routes/hamsters');
