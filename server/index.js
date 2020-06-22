@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 3000;
 app.use(express.json());
 
 let path = require('path');
-app.get('*', (req, res) => {
+app.get('/*', (req, res) => {
     let filePath = path.resolve('./build/index.html')
     res.sendFile(filePath)
 })
