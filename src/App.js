@@ -51,7 +51,7 @@
 import React, { useState } from 'react';
 import './App.css';
 
-function App() {
+async function App() {
     const [hamsters, setHamsters] = useState(null);
     const handleClick = async () => {
         let array = await getHamsters();
