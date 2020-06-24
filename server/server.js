@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const path = require('path');
-// app.use(express.json())
+app.use(express.json())
 
 const serverPort = process.env.PORT || 1234;
 
@@ -25,14 +25,14 @@ app.use('/api/games', gamesRoute);
 const statsRoute = require('./routes/stats');
 app.use('/api/stats', statsRoute);
 
-app.get('/*', function(req, res) {
-    res.sendFile(path.join(__dirname + '/../build/index.html'),
-    function(err) {
-        if (err) {
-            res.status(500).send(err)
-        }
-    })
-})
+// app.get('/*', function(req, res) {
+//     res.sendFile(path.join(__dirname + '/../build/index.html'),
+//     function(err) {
+//         if (err) {
+//             res.status(500).send(err)
+//         }
+//     })
+// })
 
 app.get('/api/hamsters', (req, res) => {
     console.log('GET /api', req.url);
