@@ -5,44 +5,25 @@ const router = new Router();
 
 router.get('/', async (req, res) => {
 
-    try {
-        let hamsters = [];
-        let snapShot = await db.collection('hamsters').get()
-
-        snapShot.forEach(doc => {
-            hamsters.push(doc.data());
-        })
-        res.send({ hamsters : hamsters })
-    }
-
-    // let hamsters = db
-    // .get('hamsters')
-    // .value()
+    let hamsters = db
+    .get('hamsters')
+    .value()
     
-    // res.send(hamsters);
-    catch(err){res.status(500).send(err)}
+    res.send(hamsters);
 })
 
 router.get('/random', (req, res) => {
 
-    try {
-        let hamsters = []
-        let snapShot = await db.collection('hamsters').get()
+    let hamsters = db
+    .get('hamsters')
+    .value();
+    const randomHamster = hamsters[Math.floor(Math.random() * hamsters.length)];
 
-        snapShot.forEach(doc => {
-            hamsters.push(doc.data())
-        })
-        const randomHamster = hamsters[Math.floor(Math.random() * hamsters.length)];
-        res.send(randomHamster);
-    }
-    catch(err){res.status(500).send(err)}
-    // let hamsters = db
-    // .get('hamsters')
-    // .value();
-
+    res.send(randomHamster);
 })
 
 router.get('/:id', (req, res) => {
+    
     let hamster = db
     .get('hamsters')
     .find({ id: parseInt(req.params.id )})
