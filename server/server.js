@@ -10,29 +10,29 @@ console.log('dirname', __dirname + '/../build');
 app.use(express.static(__dirname + '/../build'));
 
 //Routes
-app.use('/api/', express.static('public'));
-app.use('/api/assets', express.static('assets'));
+// app.use('/api/', express.static('public'));
+// app.use('/api/assets', express.static('assets'));
 
 // const hamstersRoute = require('./routes/hamsters');
 // app.use('/api/hamsters', hamstersRoute);
 
-const chartsRoute = require('./routes/charts');
-app.use('/api/charts', chartsRoute);
+// const chartsRoute = require('./routes/charts');
+// app.use('/api/charts', chartsRoute);
 
-const gamesRoute = require('./routes/games');
-app.use('/api/games', gamesRoute);
+// const gamesRoute = require('./routes/games');
+// app.use('/api/games', gamesRoute);
 
-const statsRoute = require('./routes/stats');
-app.use('/api/stats', statsRoute);
+// const statsRoute = require('./routes/stats');
+// app.use('/api/stats', statsRoute);
 
-app.get('/*', function(req, res) {
-    res.sendFile(path.join(__dirname + '/../build/index.html'),
-    function(err) {
-        if (err) {
-            res.status(500).send(err)
-        }
-    })
-})
+// app.get('/*', function(req, res) {
+//     res.sendFile(path.join(__dirname + '/../build/index.html'),
+//     function(err) {
+//         if (err) {
+//             res.status(500).send(err)
+//         }
+//     })
+// })
 
 app.get('/api/hamsters', (req, res) => {
     console.log('GET /api', req.url);
