@@ -13,7 +13,7 @@ app.use(express.static(__dirname + '/../build'));
 app.use('/api/', express.static('public'));
 app.use('/api/assets', express.static('assets'));
 
-const hamstersRoute = require('./routes/hamsters');
+// const hamstersRoute = require('./routes/hamsters');
 // app.use('/api/hamsters', hamstersRoute);
 
 const chartsRoute = require('./routes/charts');
