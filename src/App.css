@@ -7,3 +7,35 @@
     font-size: calc(10px + 2vmin);
     color: white;
 }
+
+main {
+    padding: 1em;
+}
+
+footer {
+    background-color: #282c34;
+    text-align: center;
+    color: white;
+    padding: 1em;
+}
+
+header nav {
+    display: flex;
+    flex-direction: row;
+}
+
+header nav a {
+    color: hotpink;
+    padding: 0.2em 1em;
+    border: 1px solid red;
+    flex: 1 1 auto;
+}
+
+header nav a:hover {
+    background-color: gray;
+}
+
+header nav a.active {
+    background-color: white;
+    border-bottom: none;
+}
