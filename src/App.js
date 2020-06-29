@@ -20,7 +20,6 @@ function App() {
 
                     <NavLink to="/battle" activeClassName="active"> Battle </NavLink>
                     <NavLink to="/stats" activeClassName="active"> Stats </NavLink>
-                    <NavLink to="/matchup" activeClassName="active"> Result </NavLink>
                     <NavLink to="/upload" activeClassName="active"> Upload </NavLink>
                 </nav>
             </header>
@@ -28,6 +27,8 @@ function App() {
             <Switch>
 
                 <Route path="/battle"> <Battle /> </Route>
+                <Route path="/battle/:id1/:id2"> <Battle /> </Route>
+                <Route path="/matchup/:id1/:id2"> <Upload /> </Route>
                 <Route path='/stats'> <Stats /> </Route>
                 <Route path="/upload"> <Upload /> </Route>
                

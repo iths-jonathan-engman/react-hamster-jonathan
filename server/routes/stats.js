@@ -13,7 +13,7 @@ router.get('/', async (req, res) => {
     
 
     // res.send({ total: -1 });
-    res.send( { hamsterArray } );
+    res.send( hamsterArray  );
 })
 
 module.exports = router;
