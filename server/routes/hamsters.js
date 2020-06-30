@@ -19,6 +19,7 @@ router.get('/random', (req, res) => {
     const randomHamster = hamsters[Math.floor(Math.random() * hamsters.length)];
 
     res.send(randomHamster);
+    console.log('GET /api/hamsters/random hamsterArray=', randomHamster);
 })
 
 router.get('/:id', (req, res) => {

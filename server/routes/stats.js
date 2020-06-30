@@ -6,9 +6,7 @@ const router = new Router();
 router.get('/', async (req, res) => {
     console.log('GET /api/stats');
     
-    let hamsterArray = db
-    .get('hamsters')
-    .value();
+    let hamsterArray = db.get('games').value();
     console.log('GET /api/stats hamsterArray=', hamsterArray);
     
 

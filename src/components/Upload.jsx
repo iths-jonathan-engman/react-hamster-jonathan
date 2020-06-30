@@ -1,32 +1,44 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 const Upload = () => {
-    const [] = useState(null);
+//     const [] = useState(null);
     
-    useEffect(() => {
-        async function get() {
-            const response = await fetch('/api/');
-            const data = await response.json();
+    // useEffect(() => {
+    //     async function get() {
+    //         const response = await fetch('/api/');
+    //         const data = await response.json();
             
-            setStats();
-            console.log()
-        }
-        get();
+    //         setStats();
+    //         console.log()
+    //     }
+    //     get();
 
-    }, []);
+    // }, []);
 
     return (
         <div>
-            <h2> Statistik </h2>
-            { stats === null
-            ? <p> No data (yet) </p>
-            : (
-                <div>
-                    <p> Number of games: { stats }</p>
-                </div>
-            )
-            }
+            <h1> Upload a hamster! </h1>
+
+            <div>
+                <label>
+                    <input type="text" placeholder="Name: "></input>
+                </label>
+
+                <label>
+                    <input type="text" placeholder="Age: "></input>
+                </label>
+
+                <label>
+                    <input type="text" placeholder="Fav food: "></input>
+                </label>
+                
+                <label>
+                    <input type="text" placeholder="Loves: "></input>
+                </label>
             </div>
-    )};
+
+        </div>
+    )
+};
 
 export default Upload;

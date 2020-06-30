@@ -44,24 +44,4 @@ function App() {
     );
 }
 
-
-// async function getHamsters() {
-//     let baseUrl = '/api';
-//     try {
-//         const response = await fetch(baseUrl + '/hamsters'); // fetching /api/hamsters
-//         const hamsterArray = await response.json();
-//         return hamsterArray;
-//     } catch (e) {
-//         console.log('Fetch failed because', e);
-//         return null;
-//     }
-// }
-
-// const ScrollToTop = () => {
-// 	const { pathname } = useLocation();
-// 	useEffect(() => { window.scrollTo(0, 0); }, [pathname]);
-// 	return null;
-// }
-
-
 export default App;

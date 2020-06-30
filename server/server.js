@@ -13,15 +13,19 @@ app.use(express.static(__dirname + '/../build'));
 app.use('/api/assets', express.static('assets'));
 
 const hamstersRoute = require('./routes/hamsters');
+// console.log('CONSOLE MESSAGE: ', hamstersRoute)
 app.use('/api/hamsters', hamstersRoute);
 
 const chartsRoute = require('./routes/charts');
+// console.log('CONSOLE MESSAGE: ', chartsRoute);
 app.use('/api/charts', chartsRoute);
 
 const gamesRoute = require('./routes/games');
+// console.log('CONSOLE MESSAGE: ', gamesRoute);
 app.use('/api/games', gamesRoute);
 
 const statsRoute = require('./routes/stats');
+// console.log('CONSOLE MESSAGE: ', statsRoute);
 app.use('/api/stats', statsRoute);
 
 app.get('/*', function(req, res) {

@@ -6,18 +6,17 @@ const Battle = () => {
     
     useEffect(() => {
         async function getHamster() {
-
+            
+            
             const response1 = await fetch('/api/hamsters/random');
-            const hamster1 = await response1.json();
+            const hamster11 = await response1.json();
 
             const response2 = await fetch('/api/hamsters/random');
-            const hamster2 = await response2.json();
-            // data should contain { total }
-            setHamster1(hamster1);
-            setHamster2(hamster2);
+            const hamster22 = await response2.json();
+        
+            setHamster1(hamster11);
+            setHamster2(hamster22);
 
-            console.log(hamster1);
-            console.log(hamster2);
         }
         getHamster();
 
