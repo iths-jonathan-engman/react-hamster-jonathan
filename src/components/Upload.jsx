@@ -37,7 +37,17 @@ const Upload = () => {
                 </label>
             </div>
 
+        {/* <div>
+            <h3> Upload a hamster </h3>
+            <form onSubmit={stopSubmit}></form>
+            <div className="form-group">
+                <label> Hamster name </label>
+                <input type="text" placeholder="Hamster name"
+                    onChange={e => setTitle(e.target.value)} />
+            </div>
+        </div> */}
         </div>
+
     )
 };
 

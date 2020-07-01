@@ -16,10 +16,10 @@ footer {
     background-color: #282c34;
     text-align: center;
     color: white;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 100vw;
-    height: 60px;
+    height: 20px;
 }
 
 header nav {

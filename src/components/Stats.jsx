@@ -4,23 +4,20 @@ const Stats = () => {
     const [stats, setStats] = useState(null);
     const [topHamsters, setTopHamster] = useState(null);
     const [botHamsters, setBottomHamster] = useState(null);
-    //U
+    
     useEffect(() => {
         async function getStatistics() {
             const response = await fetch('/api/stats');
-            console.log(response);
             const data = await response.json();
-            // data should contain { total }
 
-            setStats(data.stats);
             console.log(data)
+            setStats(data);
         }
         getStatistics();
 
         async function getTopHamster() {
             const response = await fetch('/api/charts/top');
             const hamTop = await response.json();
-            // data should contain { total }
 
             console.log(hamTop);
             setTopHamster(hamTop);
@@ -30,7 +27,6 @@ const Stats = () => {
         async function getBotHamster() {
             const response = await fetch('/api/charts/bottom');
             const hamBot = await response.json();
-            // data should contain { total }
             
             console.log(hamBot);
             setBottomHamster(hamBot);
@@ -44,13 +40,13 @@ const Stats = () => {
             <h2> Statistic </h2>
             { stats === null
             ? <p> No data (yet) </p>
-            : (
-                <div>
-                    <p> Number of games: { stats }</p>
-                </div>
-            )
+            : 
+                    <article>
+                        <ul> Total games: {stats.length} </ul>
+                    </article>
+            
             }
-            <h1> Top hamsters! </h1>
+            <h2> Top hamsters! </h2>
             { topHamsters === null 
                 ? <p> No data (yet) </p> 
                 : topHamsters.map(hamster => (
